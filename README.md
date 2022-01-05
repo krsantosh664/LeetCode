@@ -1,2 +1,2 @@
 # LeetCode
-Created this repository to solve LeetCode Programs
+In this repository, I have kept my Leetcode solutions to help everyone. Complete executed program kept here. 
