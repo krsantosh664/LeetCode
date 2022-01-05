@@ -1,0 +1,33 @@
+//https://leetcode.com/problems/two-sum/
+//Complete Program in Java
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int len= nums.length;
+			
+			
+			for(int i=0;i<len-1;i++)
+			{
+				int j=i+1;
+				while(j<len)
+				{
+					if((nums[i]+nums[j])==target)
+					{
+						
+						return new int[]{i,j};
+					}
+					j++;
+				}
+			}
+			return null;
+    }
+    
+    //Comment main method to run complete program in IDE
+    public static void main(String[] args)
+		{
+			Solution s=new Solution();
+			int[] arr =new int[]{3,2,4};
+			int num=6;
+			int[] index=s.twoSum(arr, num);
+			System.out.println(Arrays.toString(index));
+		}
+}
