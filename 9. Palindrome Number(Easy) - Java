@@ -1,0 +1,29 @@
+//https://leetcode.com/problems/palindrome-number/
+//Complete Java program for Leetcode problem 9. Palindrome Number(Easy)
+
+class Solution {
+    public boolean isPalindrome(int x) {
+        int temp=x;
+        int rem=0, sum=0;
+        
+        while(x>0)
+        {
+        	rem=x%10;
+        	x=x/10;
+        	sum=sum*10+rem;
+        }
+        if(sum==temp)
+        	return true;
+        else
+        	return false;
+    }
+    
+    //Comment or Delete main method while running program in Leetcode
+    public static void main(String[] args)
+    {
+    	Solution s=new Solution();
+    	int num=-12321;
+    	boolean value=s.isPalindrome(num);
+    	System.out.println(value);
+    }
+}
