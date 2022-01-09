@@ -1,0 +1,37 @@
+//https://leetcode.com/problems/longest-common-prefix/
+////Complete Program in Java
+import java.util.Arrays;
+
+public class Solution{
+	public String getPrefix(String[] strs)
+	{
+		if(strs.length==0)
+		{
+			return "";
+		}
+		Arrays.sort(strs);
+		String first=strs[0];
+		String last=strs[strs.length-1];
+		int a=0;
+		while(a<first.length())
+		{
+			if(first.charAt(a)==last.charAt(a))
+			{
+				a++;
+			}
+			else
+			{
+				break;
+			}
+		}
+		return a==0?"":first.substring(0, a);
+	}
+  //Comment main method to run complete program in Leetcode
+	public static void main(String[] args)
+	{
+		Solution s=new Solution();
+		String[] str=new String[] {"flower", "flow", "flowing"};
+		String prefix=s.getPrefix(str);
+		System.out.println(prefix);
+	}
+}
